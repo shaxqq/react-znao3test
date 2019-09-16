@@ -12,13 +12,13 @@ process.env.SECRET_KEY = 'secret';
 users.post('/register', (req, res) =>{
     const today = new Date();
     const userData = {
-        userName: req.body.userName,
+        user_name: req.body.user_name,
         password: req.body.password,
         create: today,
     };
     User.findOne({
         where:{
-            userName: req.body.userName
+            user_name: req.body.user_name
         }
     }).then (user => {
             if(!user){
@@ -26,7 +26,7 @@ users.post('/register', (req, res) =>{
                     userData.password = hash;
                     User.created(userData)
                         .then(user =>{
-                            res.json({status: user.name + 'Вы зарегестрировались'})
+                            res.json({status: user.user_name + 'Вы зарегестрировались'})
                         })
                         .catch(err =>{
                             res.send('err' + err)
@@ -43,7 +43,7 @@ users.post('/register', (req, res) =>{
 users.post('/login', (req, res)=>{
     User.findOne({
         where: {
-            userName: req.body.userName
+            user_name: req.body.user_name
         }.then (user =>{
             if(user){
                 if(bcrypt.compareSync(req.body.password, user.password)){

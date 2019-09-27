@@ -18,6 +18,16 @@
     "nodemon": "^1.19.2",
     "sequelize": "^4.44.3"
   },
+  "lint-staged": {
+    "*": [
+      "npm run pretty",
+      "git add"
+    ],
+    "*.{js,css,json,md}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/shaxqq/react-znao3test.git"
@@ -25,5 +35,8 @@
   "bugs": {
     "url": "https://github.com/shaxqq/react-znao3test/issues"
   },
-  "homepage": "https://github.com/shaxqq/react-znao3test#readme"
+  "homepage": "https://github.com/shaxqq/react-znao3test#readme",
+  "devDependencies": {
+    "prettier": "1.18.2"
+  }
 }

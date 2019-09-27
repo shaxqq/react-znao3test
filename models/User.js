@@ -9,16 +9,19 @@ module.exports = db.sequelize.define(
             primaryKey: true,
             autoIncrement:true
         },
-        user_name: {
-          type: Sequelize.TEXT
+        username: {
+          type: Sequelize.STRING
         },
-        password: {
-            type: Sequelize.TEXT
+        first_password: {
+          type: Sequelize.STRING
+        },
+        last_password: {
+          type: Sequelize.STRING
         },
         created: {
             type: Sequelize.DATE,
             defaultValue: Sequelize.NOW
-        }
+        },
     },
 {
         timestamps: false

@@ -2,8 +2,8 @@ import React from 'react';
 import Container from '@material-ui/core/Container';
 import Typography from '@material-ui/core/Typography';
 import {makeStyles} from "@material-ui/core";
-import NavBar from './NavBar';
-import LoginForm from "./LoginForm";
+// import NavBar from './Navigation/NavBar';
+
 const useStyles = makeStyles( ()=>({
     box: {
         backgroundColor: '#54fc2d',
@@ -14,11 +14,10 @@ const useStyles = makeStyles( ()=>({
 const Landing = ()=>{
     return(
         <div>
-            <NavBar />
+            {/*<NavBar />*/}
             <Container maxWidth="sm">
                 <Typography component="div" style={useStyles.box} />
             </Container>
-            <LoginForm />
         </div>
     )
 };

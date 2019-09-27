@@ -1,10 +1,11 @@
-const axios = require('axios');
+import axios from 'axios';
 
 export const register = newUser =>{
     return axios
-        .post('register', {
-            user_name: newUser.user_name,
-            password: newUser.password,
+        .post('users/register', {
+            username: newUser.username,
+            first_password: newUser.first_password,
+            last_password: newUser.last_password,
         }).then(res =>{
             console.log('Вы зарегестрировались')
         })
@@ -12,9 +13,9 @@ export const register = newUser =>{
 
 export const login = user =>{
     return axios
-        .post('login', {
-            user_name: user.user_name,
-            password: user.password,
+        .post('users/login', {
+            username: user.username,
+            first_password: user.first_password,
         }).then(res =>{
             localStorage.setItem('usertoken', res.data);
             return res.data

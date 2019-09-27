@@ -1,11 +1,15 @@
 import React from 'react';
-import Landing from '../src/components/PersonalArea/Landing'
+import User from './components/UserArea/index'
+import Admin from './components/AdminArea/index'
 
 function App() {
   return (
-    <div>
-     <Landing />
-    </div>
+      <div>
+          {localStorage.usertoken ?
+            <Admin />
+            :
+            <User />}
+      </div>
   );
 }
 

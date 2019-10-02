@@ -1,12 +1,11 @@
 import React, { useState } from "react";
-import DialogContentText from "@material-ui/core/DialogContentText";
 import TextField from "@material-ui/core/TextField";
-import DialogContent from "@material-ui/core/DialogContent";
 import { makeStyles } from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
 import DialogActions from "@material-ui/core/DialogActions";
 import {register} from "../UserFunctions";
-import FormControl from '@material-ui/core/FormControl';
+import  Typography  from "@material-ui/core/Typography";
+import Container from '@material-ui/core/Container';
 
 
 const useStyles = makeStyles(() => ({
@@ -60,11 +59,10 @@ const RegisterForm = ({history}) => {
     };
 
     return (
-      <FormControl onSubmit={onSubmit}>
-        <DialogContent className={classes.dialog__content}>
-            <DialogContentText className={classes.dialog__text}>
+        <Container maxWidth='sm' className={classes.dialog__content} onSubmit={onSubmit}>
+            <Typography className={classes.dialog__text}>
                 Ваш логин
-            </DialogContentText>
+            </Typography>
             <TextField
                 id="outlined-username-input"
                 label="Имя пользоватея "
@@ -75,9 +73,9 @@ const RegisterForm = ({history}) => {
                 variant="outlined"
                 onChange={e=>{setUsername(e.target.value)}}
             />
-            <DialogContentText className={classes.dialog__text}>
+            <Typography className={classes.dialog__text}>
                 Ваш пароль
-            </DialogContentText>
+            </Typography>
             <TextField
                 id="outlined-password-input"
                 label="Пароль"
@@ -88,9 +86,9 @@ const RegisterForm = ({history}) => {
                 variant="outlined"
                 onChange={e=>{setFirst_password(e.target.value)}}
             />
-            <DialogContentText className={classes.dialog__text}>
+            <Typography className={classes.dialog__text}>
                 Повторить пароль
-            </DialogContentText>
+            </Typography>
             <TextField
                 id="outlined-password-repeat-input"
                 label="Пароль"
@@ -113,8 +111,7 @@ const RegisterForm = ({history}) => {
               Войти
             </Button>
           </DialogActions>
-        </DialogContent>
-      </FormControl>
+        </Container>
     );
 };
 export default RegisterForm;

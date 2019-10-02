@@ -1,0 +1,80 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "title": "Home",
+      "url": "/"
+    },
+    {
+      "id": 2,
+      "title": "About Us",
+      "url": "/about-us"
+    },
+    {
+      "id": 3,
+      "title": "Team",
+      "url": "/team",
+      "children": [
+        {
+          "id": 3.1,
+          "title": "Tim Drake",
+          "url": "/tim-drake"
+        },
+        {
+          "id": 3.2,
+          "title": "Jason Todd",
+          "url": "/jason-todd"
+        },
+        {
+          "id": 3.3,
+          "title": "Richard Grayson",
+          "url": "/richard-grayson"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Services",
+      "url": "/services",
+      "children": [
+        {
+          "id": 4.1,
+          "title": "Web Development",
+          "url": "/web-development"
+        },
+        {
+          "id": 4.2,
+          "title": "UI Design",
+          "url": "/ui-design"
+        },
+        {
+          "id": 4.3,
+          "title": "Copywriting",
+          "url": "/copywriting"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Contact",
+      "url": "/contact"
+    },
+    {
+      "id": 6,
+      "title": "Social",
+      "url": "/social",
+      "children": [
+        {
+          "id": 6.1,
+          "title": "Twitter",
+          "url": "/twitter"
+        },
+        {
+          "id": 6.2,
+          "title": "Facebook",
+          "url": "/facebook"
+        }
+      ]
+    }
+  ]
+}

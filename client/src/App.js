@@ -1,16 +1,17 @@
-import React from 'react';
-import User from './components/UserArea/index'
-import Admin from './components/AdminArea/index'
+import React, { Component } from "react";
+// import User from './components/UserArea/index';
+// import Admin from './components/AdminArea/index';
+import Routes from "./Routes";
+// import {Route} from "react-router-dom";
 
-function App() {
-  return (
+class App extends Component  {
+  render(){
+    return (
       <div>
-          {localStorage.usertoken ?
-            <Admin />
-            :
-            <User />}
+        <Routes />
       </div>
-  );
+    );
+  }
 }
 
 export default App;

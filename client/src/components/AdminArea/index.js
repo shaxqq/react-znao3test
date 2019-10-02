@@ -1,14 +1,14 @@
 import React from 'react';
-import NavBar from './Navigation/NavBar';
-import Landing from './Content/Landing';
-
+import { BrowserRouter as Router, Route } from 'react-router-dom'
+import LogOutButton from "./Navigation/LogOutButton";
 
 const Admin = ()=>{
   return(
-    <div>
-      <NavBar />
-      <Landing />
-    </div>
+    <Router>
+      <div>
+        <Route exact path="/admin" component={LogOutButton} />
+      </div>
+    </Router>
   )
 };
 export default Admin

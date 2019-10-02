@@ -1,11 +1,12 @@
 import React, {useState} from "react";
-import DialogContentText from "@material-ui/core/DialogContentText";
 import TextField from "@material-ui/core/TextField";
-import DialogContent from "@material-ui/core/DialogContent";
 import { makeStyles } from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
 import DialogActions from "@material-ui/core/DialogActions";
 import {login} from '../UserFunctions'
+import  Typography  from "@material-ui/core/Typography";
+import Container from '@material-ui/core/Container';
+
 
 const useStyles = makeStyles(theme => ({
     dialog__content: {
@@ -55,10 +56,10 @@ const LoginForm = ({history}) => {
       })
     };
     return (
-        <DialogContent className={classes.dialog__content} onSubmit={onSubmit}>
-            <DialogContentText className={classes.dialog__text}>
+        <Container maxWidth='sm' className={classes.dialog__content} onSubmit={onSubmit}>
+            <Typography className={classes.dialog__text}>
                 Ваш логин
-            </DialogContentText>
+            </Typography>
             <TextField
                 id="outlined-username-input"
                 label="Имя пользователя "
@@ -70,9 +71,9 @@ const LoginForm = ({history}) => {
                 name="username"
                 onChange={e =>{setUsername(e.target.value)}}
             />
-            <DialogContentText className={classes.dialog__text}>
+            <Typography className={classes.dialog__text}>
                 Ваш пароль
-            </DialogContentText>
+            </Typography>
             <TextField
                 id="outlined-password-input"
                 label="Пароль"
@@ -92,11 +93,12 @@ const LoginForm = ({history}) => {
               variant="contained"
               onClick={onSubmit}
               className={classes.login__button}
+              to={'/admin'}
               >
               Войти
               </Button>
             </DialogActions>
-        </DialogContent>
+        </Container>
     );
 };
 export default LoginForm;

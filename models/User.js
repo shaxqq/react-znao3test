@@ -12,10 +12,7 @@ module.exports = db.sequelize.define(
         username: {
           type: Sequelize.STRING
         },
-        first_password: {
-          type: Sequelize.STRING
-        },
-        last_password: {
+        hash: {
           type: Sequelize.STRING
         },
         created: {

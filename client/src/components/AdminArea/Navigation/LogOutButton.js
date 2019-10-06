@@ -1,7 +1,9 @@
 import React from 'react';
 import Button from '@material-ui/core/Button';
+import {useHistory} from 'react-router-dom';
 
-function LogOutButton ({history}) {
+function LogOutButton () {
+  const history = useHistory();
 
   const logOut =(e)=>{
     e.preventDefault();

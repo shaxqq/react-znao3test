@@ -6,7 +6,6 @@ import Menu from "@material-ui/core/Menu";
 import MenuItem from "@material-ui/core/MenuItem";
 import { Link } from "react-router-dom";
 
-
 const useStyles = makeStyles(theme => ({
   icon__button: {
     marginLeft: theme.spacing(2)
@@ -30,7 +29,7 @@ const useStyles = makeStyles(theme => ({
   dialog: {
     justifyContent: "space-around",
     padding: "25px 40px 12px"
-  },
+  }
 
   // forgot__button: {
   //   color: "#33b5e5!important",
@@ -43,16 +42,16 @@ const useStyles = makeStyles(theme => ({
 }));
 
 const LogRegArea = [
-     {
-       id: 1,
-       name: 'Войти',
-       url: '/login',
-     },
-     {
-      id: 2,
-      name: 'Регистрация',
-      url: '/register',
-    },
+  {
+    id: 1,
+    name: "Войти",
+    url: "/login"
+  },
+  {
+    id: 2,
+    name: "Регистрация",
+    url: "/register"
+  }
 ];
 
 const NavButton = () => {
@@ -65,7 +64,6 @@ const NavButton = () => {
     setAnchorEl(null);
   };
 
-
   return (
     <div>
       <IconButton
@@ -73,7 +71,7 @@ const NavButton = () => {
         color="inherit"
         edge="end"
         onClick={handleClick}
-        >
+      >
         <AccountCircle />
       </IconButton>
       <Menu
@@ -82,10 +80,16 @@ const NavButton = () => {
         open={Boolean(anchorEl)}
         onClose={handleClose}
       >
-        {LogRegArea.map(option =>(<MenuItem key={option.id}
-                                            to={option.url}
-                                            component={Link} >{option.name}</MenuItem>))}
-
+        {LogRegArea.map(option => (
+          <MenuItem
+            key={option.id}
+            to={option.url}
+            component={Link}
+            onClick={handleClose}
+          >
+            {option.name}
+          </MenuItem>
+        ))}
       </Menu>
       {/*<Button aria-controls="simple-menu" aria-haspopup="true" >*/}
       {/*  Open Menu*/}

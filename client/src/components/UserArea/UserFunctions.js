@@ -7,8 +7,8 @@ export const register = newUser =>{
             first_password: newUser.first_password,
             last_password: newUser.last_password,
         }).then(res =>{
-            console.log('Вы зарегестрировались')
-        })
+        localStorage.setItem('usertoken', res.data);
+        return res.data});
 };
 
 export const login = user =>{

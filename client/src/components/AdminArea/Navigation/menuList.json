@@ -1,0 +1,24 @@
+{
+  "list": [
+    {
+      "id": 1,
+      "title": "Добоавить страницу",
+      "url": "/admin/create-page"
+    },
+    {
+      "id": 2,
+      "title": "Изменить страницу",
+      "url": "/admin/change-page"
+    },
+    {
+      "id": 3,
+      "title": "Изменить меню",
+      "url": "/admin/change-menu"
+    },
+    {
+      "id": 4,
+      "title": "Все пользователи",
+      "url": "/admin/all-user"
+    }
+  ]
+}
